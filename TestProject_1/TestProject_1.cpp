@@ -1,4 +1,4 @@
-// TestProject_1.cpp: определяет точку входа для консольного приложения.
+// TestProject_1.cpp: РѕРїСЂРµРґРµР»СЏРµС‚ С‚РѕС‡РєСѓ РІС…РѕРґР° РґР»СЏ РєРѕРЅСЃРѕР»СЊРЅРѕРіРѕ РїСЂРёР»РѕР¶РµРЅРёСЏ.
 //
 
 #include "stdafx.h"
@@ -73,7 +73,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	double startTime = 0, elapsedTime = 0;
 	double clockZero = 0.0;
 
-	printf("Введите размер матрицы ");
+	printf("Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ РјР°С‚СЂРёС†С‹ ");
 	scanf_s("%d", &N);
 	printf("______________________\n");
 
@@ -83,7 +83,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	srand(time(NULL));
 
-	printf ("Исходная матрица\n" );
+	printf ("РСЃС…РѕРґРЅР°СЏ РјР°С‚СЂРёС†Р°\n" );
 
 	randInt(A,b,N);
 
@@ -99,7 +99,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	//startTime = clock();
 	startTime = omp_get_wtime();
-	printf("\nОбратный ход\n");
+	printf("\nРћР±СЂР°С‚РЅС‹Р№ С…РѕРґ\n");
 	for ( k = 0; k < N - 1; k++ )
 	{
 		partialPivot(A, b, N, k);
@@ -128,8 +128,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	}
 
 	printf("%d threads\n", thread_num);
-	printf("Время = %6.4f (s)\n", elapsedTime - startTime );   
-	printf("\nРезультат выполнения:\n");
+	printf("Р’СЂРµРјСЏ = %6.4f (s)\n", elapsedTime - startTime );   
+	printf("\nР РµР·СѓР»СЊС‚Р°С‚ РІС‹РїРѕР»РЅРµРЅРёСЏ:\n");
 
 	for ( int index = 0; index < N; index++)
 	{
@@ -138,7 +138,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	for(int m=N-1; m >= 0; m--){
         double sum=0;
-        // идем по строке спаво налево, считая сумму корень*коэфицент, до текущего корня
+        // РёРґРµРј РїРѕ СЃС‚СЂРѕРєРµ СЃРїР°РІРѕ РЅР°Р»РµРІРѕ, СЃС‡РёС‚Р°СЏ СЃСѓРјРјСѓ РєРѕСЂРµРЅСЊ*РєРѕСЌС„РёС†РµРЅС‚, РґРѕ С‚РµРєСѓС‰РµРіРѕ РєРѕСЂРЅСЏ
         for(int i=N-1; i > m; i--){
             sum += X[i] * A[m * N + i];//[i]; //x*N+y
         }
