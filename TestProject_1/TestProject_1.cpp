@@ -97,7 +97,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	}
 
 
-	startTime = clock();
+	//startTime = clock();
+	startTime = omp_get_wtime();
 	printf("\nОбратный ход\n");
 	for ( k = 0; k < N - 1; k++ )
 	{
@@ -115,7 +116,8 @@ int _tmain(int argc, _TCHAR* argv[])
 		}
 	}
 
-	elapsedTime = clock() - startTime;
+	//elapsedTime = clock() - startTime;
+	elapsedTime = omp_get_wtime();
 
 	printf("\n--------------\n");
 
@@ -126,7 +128,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	}
 
 	printf("%d threads\n", thread_num);
-	printf("Время = %6.4f (s)\n", elapsedTime / 1000 );
+	printf("Время = %6.4f (s)\n", elapsedTime - startTime );     
 
 	for ( int index = 0; index < N; index++)
 	{
