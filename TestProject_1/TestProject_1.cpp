@@ -68,7 +68,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	int i, j, k,x, y, i_max;
 
-	int thread_num = 4;
+	int thread_num = omp_get_max_threads();
 
 	double startTime = 0, elapsedTime = 0;
 	double clockZero = 0.0;
@@ -128,7 +128,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	}
 
 	printf("%d threads\n", thread_num);
-	printf("Время = %6.4f (s)\n", elapsedTime - startTime );     
+	printf("Время = %6.4f (s)\n", elapsedTime - startTime );   
+	printf("\nРезультат выполнения:\n");
 
 	for ( int index = 0; index < N; index++)
 	{
