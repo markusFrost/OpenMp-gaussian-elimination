@@ -1,0 +1,15 @@
+﻿Сборка начата 05.10.2015 21:15:19.
+     1>Проект "C:\Users\Андрей\Documents\Visual Studio 2012\Projects\TestProject_1\TestProject_1\TestProject_1.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /openmp /Yc"stdafx.h" /Fp"Debug\TestProject_1.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /openmp /Yu"stdafx.h" /Fp"Debug\TestProject_1.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt TestProject_1.cpp
+         TestProject_1.cpp
+     1>c:\users\андрей\documents\visual studio 2012\projects\testproject_1\testproject_1\testproject_1.cpp(10): error C3005: {: непредвиденная лексема в директиве OpenMP "parallel"
+     1>c:\users\андрей\documents\visual studio 2012\projects\testproject_1\testproject_1\testproject_1.cpp(18): error C2059: синтаксическая ошибка: }
+     1>c:\users\андрей\documents\visual studio 2012\projects\testproject_1\testproject_1\testproject_1.cpp(18): error C2143: синтаксическая ошибка: отсутствие ";" перед "}"
+     1>Построение проекта "C:\Users\Андрей\Documents\Visual Studio 2012\Projects\TestProject_1\TestProject_1\TestProject_1.vcxproj" завершено (целевые объекты Build) с ошибкой.
+
+Сбой построения.
+
+Затраченное время: 00:00:00.59
